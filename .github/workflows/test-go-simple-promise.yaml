@@ -12,5 +12,5 @@ jobs:
         with:
           go-version: "${{ matrix.go-version }}"
       - uses: actions/checkout@v3
-        name: Test Go Simple Promise
+      - name: Test Go Simple Promise
         run: go test -v github.com/Stool233/snippets-hub/go-simple-promise
