@@ -6,11 +6,11 @@ jobs:
       matrix:
         go-version: [1.21.x]
         os: [ubuntu-latest, macos-latest, windows-latest]
-      runs-on: ${{ matrix.os }}
-      steps:
-        - uses: actions/setup-go@v4
-          with:
-            go-version: "${{ matrix.go-version }}"
-        - uses: actions/checkout@v3
-          name: Test Go Simple Promise
-          run: go test -v github.com/Stool233/snippets-hub/go-promise
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/setup-go@v4
+        with:
+          go-version: "${{ matrix.go-version }}"
+      - uses: actions/checkout@v3
+        name: Test Go Promise
+        run: go test -v github.com/Stool233/snippets-hub/go-promise
